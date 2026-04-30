@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogger | Article Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+  </div>
+
+  <div class="container">
+    <header>
+      <h1>Blog Platform</h1>
+      <p>Manage your articles seamlessly</p>
+    </header>
+
+    <main class="dashboard">
+      <section class="editor-section glass-panel">
+        <h2 id="form-title">Create New Article</h2>
+        <form id="article-form">
+          <input type="hidden" id="article-id">
+          
+          <div class="input-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" placeholder="Enter an engaging title" required>
+          </div>
+          
+          <div class="input-group">
+            <label for="author">Author</label>
+            <input type="text" id="author" placeholder="Your name" required>
+          </div>
+
+          <div class="input-group">
+            <label for="tags">Tags</label>
+            <input type="text" id="tags" placeholder="Comma separated (e.g. tech, lifestyle)">
+          </div>
+
+          <div class="input-group">
+            <label for="content">Content</label>
+            <textarea id="content" rows="6" placeholder="Write your article content here..." required></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" id="submit-btn" class="btn btn-primary">Publish Article</button>
+            <button type="button" id="cancel-btn" class="btn btn-secondary hidden">Cancel</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="articles-section glass-panel">
+        <h2>Your Articles <span class="badge" id="article-count">0</span></h2>
+        <div id="articles-list" class="articles-grid">
+          <!-- Articles will be injected here via JS -->
+          <div class="loading">Loading articles...</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
